@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MAST_Holder
   - Enemy
+  - Path
   layers:
   - Default
   - TransparentFX

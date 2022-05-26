@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33838782530932874}
   - component: {fileID: 23296891081351882}
   - component: {fileID: 5304617814398414774}
-  - component: {fileID: 2826750354609395076}
+  - component: {fileID: 8494997091996065363}
   m_Layer: 0
   m_Name: ForestGround01
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9999998, y: 2, z: 2.0000005}
   m_Center: {x: -0.000000923872, y: 0, z: 0}
---- !u!114 &2826750354609395076
+--- !u!114 &8494997091996065363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1619558185565566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2a2e7efead84541acecbe787e00a45, type: 3}
+  m_Script: {fileID: 11500000, guid: 52e60ad2691ce90468e4f3b36a2acecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0.06177143, b: 0, a: 0.47058824}
+  positionOffset: {x: 0, y: 0.04, z: 0}
