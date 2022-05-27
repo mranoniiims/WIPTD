@@ -13,12 +13,10 @@ GameObject:
   - component: {fileID: 3814180899409158132}
   - component: {fileID: 7163384921860010435}
   - component: {fileID: 3612187229935441102}
-  - component: {fileID: 4711299267275456232}
-  - component: {fileID: 1630667788324555086}
   - component: {fileID: 3230529013075530651}
   - component: {fileID: 6238262046742155451}
-  - component: {fileID: 5611686071244191789}
-  m_Layer: 0
+  - component: {fileID: 1189168540}
+  m_Layer: 6
   m_Name: Interactable_bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374151818356740834}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -117,45 +115,6 @@ CapsuleCollider:
   m_Height: 0.25635397
   m_Direction: 1
   m_Center: {x: 0, y: 0.12855059, z: 0}
---- !u!114 &4711299267275456232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374151818356740834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _maxGrabPoints: -1
---- !u!114 &1630667788324555086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374151818356740834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1bc992571301d4a9602ac95ef4c71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _pointableElement: {fileID: 4711299267275456232}
-  _rigidbody: {fileID: 3230529013075530651}
-  _grabSource: {fileID: 0}
-  _useClosestPointAsGrabSource: 0
-  _releaseDistance: 0
-  _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 0}
 --- !u!54 &3230529013075530651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,7 +130,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6238262046742155451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -185,7 +144,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08137724, y: 0.021801839, z: 0.08493659}
   m_Center: {x: 0, y: 0.012, z: 0}
---- !u!114 &5611686071244191789
+--- !u!114 &1189168540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,9 +153,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 374151818356740834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grabbable: {fileID: 4711299267275456232}
-  _rigidbody: {fileID: 3230529013075530651}
-  _scaleMassWithSize: 1
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: 

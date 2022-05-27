@@ -2878,7 +2878,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3606944949614365912}
   - component: {fileID: 3606944949623431978}
-  - component: {fileID: 1262218959}
   m_Layer: 0
   m_Name: OculusTouchForQuest2RightModel
   m_TagString: Untagged
@@ -2924,33 +2923,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1262218959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606944949613940984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d9a86e8d1503f48a65b2858d2ee375, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useOffset: 0
-  offset: {x: 0, y: 0, z: 0}
-  maxPointerDistance: 5
-  useCollider: 0
-  colliderIsTrigger: 1
-  useRigidBody: 0
-  changeColor: 0
-  changeThickness: 0
-  idleColor: {r: 1, g: 0, b: 0, a: 1}
-  pressedColor: {r: 0, g: 1, b: 0, a: 1}
-  idleThickness: 0.005
-  pressedThickness: 0.007
-  isPressed: 0
-  pointerPosition3D: {x: 0, y: 0, z: 0}
-  pointerPosition2D: {x: 0, y: 0}
 --- !u!1 &3606944949613940986
 GameObject:
   m_ObjectHideFlags: 0
