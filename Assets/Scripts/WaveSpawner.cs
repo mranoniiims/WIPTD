@@ -23,7 +23,9 @@ public class WaveSpawner : MonoBehaviour
 
         countdown -= Time.deltaTime;
 
-        countdownText.text = Mathf.Round(countdown).ToString();
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        countdownText.text = "Wave incoming!\n" + string.Format("{0:00}", countdown);
     }
 
     IEnumerator SpawnWave (){

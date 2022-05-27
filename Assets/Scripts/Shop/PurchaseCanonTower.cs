@@ -30,7 +30,7 @@ public class PurchaseCanonTower : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Shop.instance.PurchaseCannonTurret();
+        Shop.instance.SelectCannonTurret();
     }
 
 }

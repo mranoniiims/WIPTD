@@ -8,8 +8,10 @@ public class PurchaseExplosiveTower : MonoBehaviour, IPointerEnterHandler, IPoin
 
     private Color normalColor;
     public Color hoverColor;
+    public Color notEnoughMoneyColor;
 
     private Renderer ren;
+    
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class PurchaseExplosiveTower : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Shop.instance.PurchaseExplosiveTurret();
+        Shop.instance.SelectExplosiveTurret();
     }
 
 }

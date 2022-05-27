@@ -8,8 +8,10 @@ public class PurchaseFireTower : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private Color normalColor;
     public Color hoverColor;
+    public Color notEnoughMoneyColor;
 
     private Renderer ren;
+    
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class PurchaseFireTower : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Shop.instance.PurchaseFireTurret();
+        Shop.instance.SelectFireTurret();
     }
 
 }

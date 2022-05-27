@@ -1,14 +1,31 @@
 using UnityEngine;
-
+using TMPro;
 
 public class Shop : MonoBehaviour
 {
+
+    public TurretBlueprint canonTurrent;
+    public TurretBlueprint shotgunTurret;
+    public TurretBlueprint explosiveTurret;
+    public TurretBlueprint fireTurret;
+
+    [Header("Shop prices setup")]
+    public TMPro.TMP_Text displayPlayerMoney;
+    public TMPro.TMP_Text turret1price;
+    public TMPro.TMP_Text turret2price;
+    public TMPro.TMP_Text turret3price;
+    public TMPro.TMP_Text turret4price;
+
     BuildManager buildManager;
     void Start()
     {
         buildManager = BuildManager.instance;
     }
 
+    private void Update()
+    {
+        displayPlayerMoney.text = Mathf.Round(PlayerStats.Money).ToString() + "c";
+    }
 
     public static Shop instance;
 
@@ -20,31 +37,36 @@ public class Shop : MonoBehaviour
             }
             instance = this;
 
+        turret1price.text = Mathf.Round(canonTurrent.cost).ToString() + "c";
+        turret2price.text = Mathf.Round(shotgunTurret.cost).ToString() + "c";
+        turret3price.text = Mathf.Round(explosiveTurret.cost).ToString() + "c";
+        turret4price.text = Mathf.Round(fireTurret.cost).ToString() + "c";
+
         }
 
-    public void PurchaseCannonTurret() {
+    public void SelectCannonTurret() {
     Debug.Log("Cannon Turret Selected!");
-        buildManager.SetTurretToBuild(buildManager.standartTurretPrefab);
+        buildManager.SelectTurretToBuild(canonTurrent);
     
     }
 
-    public void PurchaseShotgunTurret()
+    public void SelectShotgunTurret()
     {
         Debug.Log("Shotgun Turret Selected!");
-        buildManager.SetTurretToBuild(buildManager.shotgunTurretPrefab);
+        buildManager.SelectTurretToBuild(shotgunTurret);
     }
 
-    public void PurchaseExplosiveTurret()
+    public void SelectExplosiveTurret()
     {
         Debug.Log("Explosive Turret Selected!");
-        buildManager.SetTurretToBuild(buildManager.exposiveTurretPrefab);
+        buildManager.SelectTurretToBuild(explosiveTurret);
 
     }
 
-    public void PurchaseFireTurret()
+    public void SelectFireTurret()
     {
         Debug.Log("Fire Turret Selected!");
-        buildManager.SetTurretToBuild(buildManager.fireTurretPrefab);
+        buildManager.SelectTurretToBuild(fireTurret);
     }
 
     

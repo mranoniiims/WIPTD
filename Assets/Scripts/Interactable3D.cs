@@ -6,8 +6,11 @@ public class Interactable3D : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private Color normalColor;
     public Color hoverColor;
     public Vector3 positionOffset;
+    public Color notEnoughMoneyColor;
 
-    private GameObject turret;
+
+    [Header("Optional")]
+    public GameObject turret;
 
     private Renderer ren;
 
@@ -21,14 +24,24 @@ public class Interactable3D : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         buildManager = BuildManager.instance;
     }
 
+    public Vector3 GetBuildPosition() {
+        return transform.position + positionOffset;
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (buildManager.GetTurretToBuild() == null)
-        
-            return;   
-        
-        ren.material.color = hoverColor;
+        if (!buildManager.CanBuild)
+            return;
+            
 
+        if (buildManager.HasMoney)
+        {
+            ren.material.color = hoverColor;
+        }
+        else
+        {
+            ren.material.color = notEnoughMoneyColor;
+        } 
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -40,7 +53,7 @@ public class Interactable3D : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerClick(PointerEventData eventData)
     {
 
-        if (buildManager.GetTurretToBuild() == null) {
+        if (!buildManager.CanBuild) {
             return;
         }
 
@@ -49,8 +62,7 @@ public class Interactable3D : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             return;
         }
 
-        GameObject turretToBuild = buildManager.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        buildManager.BuildTurretOn(this);
 
     }
 }

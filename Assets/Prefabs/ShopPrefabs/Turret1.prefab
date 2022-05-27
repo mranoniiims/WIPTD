@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 3841876205959525925}
   - component: {fileID: 4909313607220218195}
   - component: {fileID: 3841876205959525926}
+  - component: {fileID: 4101612503464576878}
   m_Layer: 0
   m_Name: Turret1
   m_TagString: Untagged
@@ -358,3 +359,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.848309, y: 3.912913, z: 3.8483083}
   m_Center: {x: -0.08914489, y: 1.9724276, z: -0.00000055879354}
+--- !u!114 &4101612503464576878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8122474532760582566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea04de652fe456a4c90a5993f6934b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0, g: 1, b: 0.028357267, a: 0.5882353}
+  notEnoughMoneyColor: {r: 1, g: 0, b: 0, a: 0.5882353}
