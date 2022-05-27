@@ -84548,10 +84548,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRCameraRig
       objectReference: {fileID: 0}
-    - target: {fileID: 1836870114509934270, guid: c2f93472f4f8cd542b8c36230d908e49, type: 3}
-      propertyPath: m_noSnapThreshhold
-      value: 0.05
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f93472f4f8cd542b8c36230d908e49, type: 3}
 --- !u!4 &3151867062770739248 stripped
