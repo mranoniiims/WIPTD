@@ -1476,16 +1476,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canonTurrent:
     prefab: {fileID: 4697760424214695624, guid: 1b4bdb76919685d42bfd8c245643ce62, type: 3}
-    cost: 250
+    cost: 150
   shotgunTurret:
     prefab: {fileID: 3564224686271789863, guid: 7bf7794cb241d52409def20e4dae483b, type: 3}
     cost: 300
   explosiveTurret:
     prefab: {fileID: 6458025245332797872, guid: 228283ab44d35584dae959467537ea3f, type: 3}
-    cost: 500
+    cost: 600
   fireTurret:
     prefab: {fileID: 334134345284336507, guid: 1175a309138e67744b8572c7d4462c04, type: 3}
-    cost: 800
+    cost: 1000
   displayPlayerMoney: {fileID: 1874216576}
   turret1price: {fileID: 1904331328}
   turret2price: {fileID: 2097924023}
@@ -15757,7 +15757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1097576345717072278, guid: da7c325f6219fa34481cae49aaba36a9, type: 3}
   spawnPoint: {fileID: 1762612611}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 15
   timeBetweenSpawns: 0.2
   countdownText: {fileID: 1673132983}
 --- !u!114 &691934773
@@ -15772,8 +15772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abf4229b0f68cc47ad6e941698b180c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 1000
-  startLives: 1
+  startMoney: 500
+  startLives: 10
   playerLivesText: {fileID: 523851790}
 --- !u!114 &691934774
 MonoBehaviour:
@@ -52120,8 +52120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d8b8fafaf5aa3458bc9d67413e881d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endGameObjects: {fileID: 390749746}
-  startPillar: {fileID: 2562377765430622225}
 --- !u!1001 &587816766774617773
 PrefabInstance:
   m_ObjectHideFlags: 0

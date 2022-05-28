@@ -21,6 +21,6 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        playerLivesText.text = "Remaining lives:\n" + Lives;
+        playerLivesText.text = "Remaining lives:\n" + Mathf.Clamp(Lives, 0, Mathf.Infinity);
     }
 }

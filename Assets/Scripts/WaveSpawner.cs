@@ -15,7 +15,7 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if (countdown <= 1f)
+        if (countdown <= 1f && GameManager.gameIsOver == false)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
