@@ -10,10 +10,13 @@ public class PlayerStats : MonoBehaviour
     public int startLives = 20;
     public TMPro.TMP_Text playerLivesText;
 
-    private void Start()
+    public static int Rounds;
+
+    void Start()
     {
         Money = startMoney;
         Lives = startLives;
+        Rounds = 0;
     }
 
     void Update()

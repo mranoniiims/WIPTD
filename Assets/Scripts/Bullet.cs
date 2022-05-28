@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        transform.LookAt(target); //this is for missles
+        //transform.LookAt(target);
 
     }
 
@@ -65,7 +65,7 @@ public class Bullet : MonoBehaviour
 
     void Damage(Transform enemy) {
 
-        EnemyMovement e = enemy.GetComponent<EnemyMovement>();
+        Enemy e = enemy.GetComponent<Enemy>();
 
         if (e != null)
         {
